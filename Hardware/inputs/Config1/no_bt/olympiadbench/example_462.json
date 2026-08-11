@@ -1,0 +1,52 @@
+{
+    "idx": 462,
+    "summary": {
+        "is_correct": false,
+        "backtrack_count": 0,
+        "total_tokens_breakdown": [
+            75,
+            1478,
+            0
+        ]
+    },
+    "execution_trace": [
+        {
+            "event_idx": 0,
+            "logical_step": 0,
+            "status": "accept_pure_draft",
+            "final_model": "Draft",
+            "draft_tokens_spent": 75,
+            "target_tokens_spent": 0,
+            "target_mode": "none",
+            "target_cached_tokens": 0,
+            "target_continuation_tokens": 0,
+            "target_critical_gen_tokens": 0,
+            "latency": 0
+        },
+        {
+            "event_idx": 1,
+            "logical_step": 1,
+            "status": "target_rescue",
+            "final_model": "Target",
+            "draft_tokens_spent": 1653,
+            "target_tokens_spent": 1478,
+            "target_mode": "prefetched_complete",
+            "target_cached_tokens": 1478,
+            "target_continuation_tokens": 0,
+            "target_critical_gen_tokens": 0,
+            "latency": 0
+        }
+    ],
+    "target_trace_events": [
+        {
+            "event_idx": 0,
+            "logical_step": 1,
+            "phase": "target_intervention",
+            "target_mode": "prefetched_complete",
+            "target_tokens": 1478,
+            "target_cached_tokens": 1478,
+            "target_continuation_tokens": 0,
+            "target_critical_gen_tokens": 0
+        }
+    ]
+}

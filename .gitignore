@@ -1,0 +1,8 @@
+**/__pycache__/
+*.py[cod]
+.DS_Store
+
+Algorithm/results/
+Algorithm/logs/
+Hardware/generated_results/
+Analysis/outputs/

@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "dataset_order": [
+    "math500",
+    "gsm8k",
+    "gaokao2023en",
+    "olympiadbench"
+  ],
+  "dataset_labels": {
+    "math500": "Math500",
+    "gsm8k": "GSM8K",
+    "gaokao2023en": "Gaokao23",
+    "olympiadbench": "Olympiad"
+  },
+  "figure8": {
+    "description": "End-to-end comparison against weak and strong GPU baselines.",
+    "notes": [
+      "Weak baseline is the basic BBeam1 GPU implementation.",
+      "Strong baseline is BBeam1 with target prefetch, prefetch cache, and cancellable draft-pipeline execution.",
+      "Ours is the v11 FPGA-GPU-GPU simulator using runtime target critical-token traces.",
+      "Energy values use the measured busy-average system power for each configuration."
+    ],
+    "configs": {
+      "Config1": {
+        "title": "Config1: 0.5B draft - 7B PRM - 7B Target",
+        "metrics": {
+          "latency_s": {
+            "weak_baseline": [11.664585, 6.388013, 12.148767, 21.438714],
+            "strong_baseline": [9.662223, 4.327201, 10.421996, 17.66107],
+            "ours": [8.83735, 2.363565, 8.729605, 15.478283]
+          },
+          "throughput_tokens_s": {
+            "weak_baseline": [80.30787, 54.19255, 76.80476, 72.170374],
+            "strong_baseline": [95.244124, 79.093625, 90.315974, 86.979586],
+            "ours": [106.899018, 144.398356, 108.871803, 99.294583]
+          },
+          "energy_j_per_token": {
+            "weak_baseline": [6.863461837361053, 10.170955239276015, 7.17650834720055, 7.637344324548517],
+            "strong_baseline": [5.78712863949599, 6.9688296503147695, 6.102907140834871, 6.337004207447141],
+            "ours": [4.5689628360237915, 3.3824321410517877, 4.486172057327261, 4.918874984846235]
+          }
+        }
+      },
+      "Config2": {
+        "title": "Config2: 0.5B draft - 7B PRM - 1.5B Target",
+        "metrics": {
+          "latency_s": {
+            "weak_baseline": [10.55815, 7.158048, 13.705284, 17.944105],
+            "strong_baseline": [8.750162, 4.531546, 8.71213, 12.831643],
+            "ours": [8.868954, 2.623829, 9.047315, 14.44692]
+          },
+          "throughput_tokens_s": {
+            "weak_baseline": [93.904708, 54.6931, 78.701281, 86.686551],
+            "strong_baseline": [118.271405, 83.906452, 115.044253, 123.710258],
+            "ours": [114.316074, 147.208897, 111.993044, 107.945706]
+          },
+          "energy_j_per_token": {
+            "weak_baseline": [5.394285103428676, 9.26165759298312, 6.436347194807852, 5.843452744558219],
+            "strong_baseline": [4.2829352115144435, 6.037065729493922, 4.40307753866983, 4.094638358050995],
+            "ours": [3.8322634756376703, 2.9759703658977426, 3.911754689590303, 4.0584228062623735]
+          }
+        }
+      }
+    }
+  },
+  "figure9": {
+    "description": "Latency speedup over the RSD framework.",
+    "latency_s": {
+      "Config1": {
+        "rsd": [9.626897, 5.955001, 10.743747, 15.589413],
+        "three_gpus": [11.664585, 6.388013, 12.148767, 21.438714],
+        "ours": [8.83735, 2.363565, 8.729605, 15.478283]
+      },
+      "Config2": {
+        "rsd": [9.799045, 6.049283, 9.368404, 13.045264],
+        "three_gpus": [10.55815, 7.158048, 13.705284, 17.944105],
+        "ours": [8.868954, 2.623829, 9.047315, 14.44692]
+      }
+    }
+  },
+  "figure10": {
+    "description": "Ablation of T2, T1, and without backtracking.",
+    "latency_s": {
+      "Config1": {
+        "baseline": [11.664585, 6.388013, 12.148767, 21.438714],
+        "baseline_t2": [9.662223, 4.327201, 10.421996, 17.66107],
+        "baseline_t2_t1": [8.83735, 2.363565, 8.729605, 15.478283],
+        "baseline_t2_t1_no_backtracking": [7.082282259568997, 2.204581580738061, 6.706688496916885, 11.511936718013324]
+      },
+      "Config2": {
+        "baseline": [10.55815, 7.158048, 13.705284, 17.944105],
+        "baseline_t2": [8.750162, 4.531546, 8.71213, 12.831643],
+        "baseline_t2_t1": [8.868954, 2.623829, 9.047315, 14.44692],
+        "baseline_t2_t1_no_backtracking": [6.632841506491501, 2.153052508926269, 6.461466458944157, 10.932850179672213]
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+    "idx": 570,
+    "summary": {
+        "is_correct": false,
+        "backtrack_count": 0,
+        "total_tokens_breakdown": [
+            0,
+            1172,
+            0
+        ]
+    },
+    "execution_trace": [
+        {
+            "event_idx": 0,
+            "logical_step": 0,
+            "status": "target_rescue",
+            "final_model": "Target",
+            "draft_tokens_spent": 295,
+            "target_tokens_spent": 479,
+            "target_mode": "prefetched_complete",
+            "target_cached_tokens": 479,
+            "target_continuation_tokens": 0,
+            "target_critical_gen_tokens": 0,
+            "latency": 0
+        },
+        {
+            "event_idx": 1,
+            "logical_step": 1,
+            "status": "target_rescue",
+            "final_model": "Target",
+            "draft_tokens_spent": 640,
+            "target_tokens_spent": 633,
+            "target_mode": "prefetched_complete",
+            "target_cached_tokens": 633,
+            "target_continuation_tokens": 0,
+            "target_critical_gen_tokens": 0,
+            "latency": 0
+        },
+        {
+            "event_idx": 2,
+            "logical_step": 2,
+            "status": "target_rescue",
+            "final_model": "Target",
+            "draft_tokens_spent": 48,
+            "target_tokens_spent": 60,
+            "target_mode": "prefetched_complete",
+            "target_cached_tokens": 60,
+            "target_continuation_tokens": 0,
+            "target_critical_gen_tokens": 0,
+            "latency": 0
+        }
+    ],
+    "target_trace_events": [
+        {
+            "event_idx": 0,
+            "logical_step": 0,
+            "phase": "target_intervention",
+            "target_mode": "prefetched_complete",
+            "target_tokens": 479,
+            "target_cached_tokens": 479,
+            "target_continuation_tokens": 0,
+            "target_critical_gen_tokens": 0
+        },
+        {
+            "event_idx": 1,
+            "logical_step": 1,
+            "phase": "target_intervention",
+            "target_mode": "prefetched_complete",
+            "target_tokens": 633,
+            "target_cached_tokens": 633,
+            "target_continuation_tokens": 0,
+            "target_critical_gen_tokens": 0
+        },
+        {
+            "event_idx": 2,
+            "logical_step": 2,
+            "phase": "target_intervention",
+            "target_mode": "prefetched_complete",
+            "target_tokens": 60,
+            "target_cached_tokens": 60,
+            "target_continuation_tokens": 0,
+            "target_critical_gen_tokens": 0
+        }
+    ]
+}

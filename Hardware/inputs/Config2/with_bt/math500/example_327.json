@@ -1,0 +1,39 @@
+{
+    "idx": 327,
+    "summary": {
+        "is_correct": false,
+        "backtrack_count": 0,
+        "total_tokens_breakdown": [
+            0,
+            1412,
+            0
+        ]
+    },
+    "execution_trace": [
+        {
+            "event_idx": 0,
+            "logical_step": 0,
+            "status": "target_rescue",
+            "final_model": "Target",
+            "draft_tokens_spent": 667,
+            "target_tokens_spent": 1412,
+            "target_mode": "prefetched_complete",
+            "target_cached_tokens": 1412,
+            "target_continuation_tokens": 0,
+            "target_critical_gen_tokens": 0,
+            "latency": 0
+        }
+    ],
+    "target_trace_events": [
+        {
+            "event_idx": 0,
+            "logical_step": 0,
+            "phase": "target_intervention",
+            "target_mode": "prefetched_complete",
+            "target_tokens": 1412,
+            "target_cached_tokens": 1412,
+            "target_continuation_tokens": 0,
+            "target_critical_gen_tokens": 0
+        }
+    ]
+}
