@@ -1,105 +1,87 @@
 {
     "idx": 477,
+    "prompt_tokens": 95,
     "summary": {
         "is_correct": true,
         "backtrack_count": 1,
         "total_tokens_breakdown": [
-            266,
-            621,
+            837,
+            362,
             0
-        ]
+        ],
+        "prompt_tokens": 95,
+        "trace_semantics": "v12_recomputed_overlap"
     },
     "execution_trace": [
         {
             "event_idx": 0,
-            "logical_step": 0,
+            "logical_step": 1,
             "status": "accept_pure_draft",
             "final_model": "Draft",
             "draft_tokens_spent": 44,
             "target_tokens_spent": 0,
-            "target_mode": "none",
-            "target_cached_tokens": 0,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
+            "target_total_tokens": 0,
+            "latency": 0.0
         },
         {
             "event_idx": 1,
-            "logical_step": 1,
+            "logical_step": 2,
             "status": "accept_pure_draft",
             "final_model": "Draft",
             "draft_tokens_spent": 41,
             "target_tokens_spent": 0,
-            "target_mode": "none",
-            "target_cached_tokens": 0,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
+            "target_total_tokens": 0,
+            "latency": 0.0
         },
         {
             "event_idx": 2,
-            "logical_step": 2,
+            "logical_step": 3,
             "status": "accept_pure_draft",
             "final_model": "Draft",
             "draft_tokens_spent": 61,
             "target_tokens_spent": 0,
-            "target_mode": "none",
-            "target_cached_tokens": 0,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
+            "target_total_tokens": 0,
+            "latency": 0.0
         },
         {
             "event_idx": 3,
-            "logical_step": 3,
+            "logical_step": 4,
             "status": "accept_pure_draft",
-            "final_model": "Draft",
+            "final_model": "Target",
             "draft_tokens_spent": 63,
             "target_tokens_spent": 0,
-            "target_mode": "none",
-            "target_cached_tokens": 0,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
+            "target_total_tokens": 0,
+            "latency": 0.0
         },
         {
             "event_idx": 4,
-            "logical_step": 4,
+            "logical_step": 5,
             "status": "target_rescue",
             "final_model": "Target",
             "draft_tokens_spent": 126,
             "target_tokens_spent": 198,
-            "target_mode": "prefetched_complete",
-            "target_cached_tokens": 198,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
+            "target_total_tokens": 198,
+            "latency": 0.0
         },
         {
             "event_idx": 5,
-            "logical_step": 5,
-            "status": "accept_via_prefetch",
-            "final_model": "Target",
+            "logical_step": 6,
+            "status": "accept_pure_draft",
+            "final_model": "Draft",
             "draft_tokens_spent": 58,
             "target_tokens_spent": 0,
-            "target_mode": "none",
-            "target_cached_tokens": 0,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
+            "target_total_tokens": 0,
+            "latency": 0.0
         },
         {
             "event_idx": 6,
-            "logical_step": 6,
+            "logical_step": 7,
             "status": "target_rescue",
             "final_model": "Target",
             "draft_tokens_spent": 41,
             "target_tokens_spent": 380,
-            "target_mode": "prefetched_complete",
-            "target_cached_tokens": 380,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
+            "target_total_tokens": 380,
+            "latency": 0.0
         },
         {
             "event_idx": 7,
@@ -107,73 +89,134 @@
             "status": "BACKTRACK_EVENT",
             "final_model": "N/A",
             "draft_tokens_spent": 0,
-            "target_tokens_spent": 0,
-            "target_mode": "none",
-            "target_cached_tokens": 0,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0,
+            "target_tokens_spent": 63,
+            "target_total_tokens": 63,
+            "latency": 0.0,
             "from_step": 6,
             "to_step": 5,
-            "steps_dropped": 1
+            "steps_dropped": 1,
+            "rollback_draft_tokens": 58,
+            "rollback_target_tokens": 58
         },
         {
             "event_idx": 8,
-            "logical_step": 8,
+            "logical_step": 7,
             "status": "accept_pure_draft",
             "final_model": "Draft",
-            "draft_tokens_spent": 43,
+            "draft_tokens_spent": 67,
             "target_tokens_spent": 0,
-            "target_mode": "none",
-            "target_cached_tokens": 0,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
+            "target_total_tokens": 0,
+            "latency": 0.0
         },
         {
             "event_idx": 9,
+            "logical_step": 8,
+            "status": "accept_pure_draft",
+            "final_model": "Draft",
+            "draft_tokens_spent": 67,
+            "target_tokens_spent": 0,
+            "target_total_tokens": 0,
+            "latency": 0.0
+        },
+        {
+            "event_idx": 10,
             "logical_step": 9,
             "status": "accept_pure_draft",
             "final_model": "Draft",
-            "draft_tokens_spent": 14,
+            "draft_tokens_spent": 67,
             "target_tokens_spent": 0,
-            "target_mode": "none",
-            "target_cached_tokens": 0,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
-        }
-    ],
-    "target_trace_events": [
-        {
-            "event_idx": 0,
-            "logical_step": 4,
-            "phase": "target_intervention",
-            "target_mode": "prefetched_complete",
-            "target_tokens": 198,
-            "target_cached_tokens": 198,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0
+            "target_total_tokens": 0,
+            "latency": 0.0
         },
         {
-            "event_idx": 1,
-            "logical_step": 6,
-            "phase": "target_intervention",
-            "target_mode": "prefetched_complete",
-            "target_tokens": 380,
-            "target_cached_tokens": 380,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0
+            "event_idx": 11,
+            "logical_step": 10,
+            "status": "accept_pure_draft",
+            "final_model": "Draft",
+            "draft_tokens_spent": 65,
+            "target_tokens_spent": 0,
+            "target_total_tokens": 0,
+            "latency": 0.0
         },
         {
-            "event_idx": 2,
-            "logical_step": 5,
-            "phase": "backtrack_target_intervention",
-            "target_mode": "partial_resume",
-            "target_tokens": 423,
-            "target_cached_tokens": 18,
-            "target_continuation_tokens": 405,
-            "target_critical_gen_tokens": 405
+            "event_idx": 12,
+            "logical_step": 11,
+            "status": "accept_pure_draft",
+            "final_model": "Draft",
+            "draft_tokens_spent": 69,
+            "target_tokens_spent": 0,
+            "target_total_tokens": 0,
+            "latency": 0.0
+        },
+        {
+            "event_idx": 13,
+            "logical_step": 12,
+            "status": "accept_pure_draft",
+            "final_model": "Draft",
+            "draft_tokens_spent": 65,
+            "target_tokens_spent": 0,
+            "target_total_tokens": 0,
+            "latency": 0.0
+        },
+        {
+            "event_idx": 14,
+            "logical_step": 13,
+            "status": "accept_pure_draft",
+            "final_model": "Draft",
+            "draft_tokens_spent": 69,
+            "target_tokens_spent": 0,
+            "target_total_tokens": 0,
+            "latency": 0.0
+        },
+        {
+            "event_idx": 15,
+            "logical_step": 14,
+            "status": "accept_pure_draft",
+            "final_model": "Draft",
+            "draft_tokens_spent": 69,
+            "target_tokens_spent": 0,
+            "target_total_tokens": 0,
+            "latency": 0.0
+        },
+        {
+            "event_idx": 16,
+            "logical_step": 15,
+            "status": "accept_pure_draft",
+            "final_model": "Target",
+            "draft_tokens_spent": 69,
+            "target_tokens_spent": 0,
+            "target_total_tokens": 0,
+            "latency": 0.0
+        },
+        {
+            "event_idx": 17,
+            "logical_step": 16,
+            "status": "target_rescue",
+            "final_model": "Target",
+            "draft_tokens_spent": 46,
+            "target_tokens_spent": 72,
+            "target_total_tokens": 72,
+            "latency": 0.0
+        },
+        {
+            "event_idx": 18,
+            "logical_step": 17,
+            "status": "target_rescue",
+            "final_model": "Target",
+            "draft_tokens_spent": 46,
+            "target_tokens_spent": 29,
+            "target_total_tokens": 29,
+            "latency": 0.0
+        },
+        {
+            "event_idx": 19,
+            "logical_step": 18,
+            "status": "accept_pure_draft",
+            "final_model": "Draft",
+            "draft_tokens_spent": 21,
+            "target_tokens_spent": 0,
+            "target_total_tokens": 0,
+            "latency": 0.0
         }
     ]
 }

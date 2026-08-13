@@ -7,5 +7,4 @@ export OUTPUT_DIR
 
 cd "${ROOT}"
 scripts/run_config1.sh with_bt
-scripts/run_config1.sh no_bt
 "${PYTHON:-python3}" scripts/check_portable_results.py --results-dir "${OUTPUT_DIR}"

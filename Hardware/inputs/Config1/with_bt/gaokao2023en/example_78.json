@@ -1,111 +1,117 @@
 {
     "idx": 78,
+    "prompt_tokens": 152,
     "summary": {
         "is_correct": true,
         "backtrack_count": 0,
         "total_tokens_breakdown": [
-            172,
-            397,
+            384,
+            161,
             0
-        ]
+        ],
+        "prompt_tokens": 152,
+        "trace_semantics": "v12_recomputed_overlap"
     },
     "execution_trace": [
         {
             "event_idx": 0,
-            "logical_step": 0,
+            "logical_step": 1,
             "status": "target_rescue",
             "final_model": "Target",
             "draft_tokens_spent": 86,
-            "target_tokens_spent": 101,
-            "target_mode": "prefetched_complete",
-            "target_cached_tokens": 101,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
+            "target_tokens_spent": 98,
+            "target_total_tokens": 98,
+            "latency": 0.0
         },
         {
             "event_idx": 1,
-            "logical_step": 1,
-            "status": "target_rescue",
-            "final_model": "Target",
-            "draft_tokens_spent": 127,
-            "target_tokens_spent": 83,
-            "target_mode": "prefetched_complete",
-            "target_cached_tokens": 83,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
+            "logical_step": 2,
+            "status": "accept_pure_draft",
+            "final_model": "Draft",
+            "draft_tokens_spent": 77,
+            "target_tokens_spent": 0,
+            "target_total_tokens": 0,
+            "latency": 0.0
         },
         {
             "event_idx": 2,
-            "logical_step": 2,
-            "status": "target_rescue",
-            "final_model": "Target",
-            "draft_tokens_spent": 208,
-            "target_tokens_spent": 213,
-            "target_mode": "prefetched_complete",
-            "target_cached_tokens": 213,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
-        },
-        {
-            "event_idx": 3,
             "logical_step": 3,
             "status": "accept_pure_draft",
             "final_model": "Draft",
-            "draft_tokens_spent": 148,
+            "draft_tokens_spent": 70,
             "target_tokens_spent": 0,
-            "target_mode": "none",
-            "target_cached_tokens": 0,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
+            "target_total_tokens": 0,
+            "latency": 0.0
         },
         {
-            "event_idx": 4,
+            "event_idx": 3,
             "logical_step": 4,
             "status": "accept_pure_draft",
             "final_model": "Draft",
-            "draft_tokens_spent": 24,
+            "draft_tokens_spent": 66,
             "target_tokens_spent": 0,
-            "target_mode": "none",
-            "target_cached_tokens": 0,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0,
-            "latency": 0
-        }
-    ],
-    "target_trace_events": [
-        {
-            "event_idx": 0,
-            "logical_step": 0,
-            "phase": "target_intervention",
-            "target_mode": "prefetched_complete",
-            "target_tokens": 101,
-            "target_cached_tokens": 101,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0
+            "target_total_tokens": 0,
+            "latency": 0.0
         },
         {
-            "event_idx": 1,
-            "logical_step": 1,
-            "phase": "target_intervention",
-            "target_mode": "prefetched_complete",
-            "target_tokens": 83,
-            "target_cached_tokens": 83,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0
+            "event_idx": 4,
+            "logical_step": 5,
+            "status": "accept_pure_draft",
+            "final_model": "Draft",
+            "draft_tokens_spent": 47,
+            "target_tokens_spent": 0,
+            "target_total_tokens": 0,
+            "latency": 0.0
         },
         {
-            "event_idx": 2,
-            "logical_step": 2,
-            "phase": "target_intervention",
-            "target_mode": "prefetched_complete",
-            "target_tokens": 213,
-            "target_cached_tokens": 213,
-            "target_continuation_tokens": 0,
-            "target_critical_gen_tokens": 0
+            "event_idx": 5,
+            "logical_step": 6,
+            "status": "accept_pure_draft",
+            "final_model": "Target",
+            "draft_tokens_spent": 40,
+            "target_tokens_spent": 0,
+            "target_total_tokens": 0,
+            "latency": 0.0
+        },
+        {
+            "event_idx": 6,
+            "logical_step": 7,
+            "status": "target_rescue",
+            "final_model": "Target",
+            "draft_tokens_spent": 98,
+            "target_tokens_spent": 38,
+            "target_total_tokens": 38,
+            "latency": 0.0
+        },
+        {
+            "event_idx": 7,
+            "logical_step": 8,
+            "status": "target_rescue",
+            "final_model": "Target",
+            "draft_tokens_spent": 63,
+            "target_tokens_spent": 25,
+            "target_total_tokens": 25,
+            "latency": 0.0
+        },
+        {
+            "event_idx": 8,
+            "logical_step": 9,
+            "status": "accept_pure_draft",
+            "final_model": "Draft",
+            "draft_tokens_spent": 61,
+            "target_tokens_spent": 0,
+            "target_total_tokens": 0,
+            "latency": 0.0
+        },
+        {
+            "event_idx": 9,
+            "logical_step": 10,
+            "status": "accept_pure_draft",
+            "final_model": "Draft",
+            "draft_tokens_spent": 23,
+            "target_tokens_spent": 0,
+            "target_total_tokens": 0,
+            "latency": 0.0
         }
     ]
 }

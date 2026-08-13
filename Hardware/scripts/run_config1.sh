@@ -9,12 +9,8 @@ case "${MODE}" in
     CONFIG_FILE="${ROOT}/simulator/configs/config1.json"
     INPUT_MODE="with_bt"
     ;;
-  no_bt)
-    CONFIG_FILE="${ROOT}/simulator/configs/config1_no_bt.json"
-    INPUT_MODE="no_bt"
-    ;;
   *)
-    echo "Usage: $0 [with_bt|no_bt]" >&2
+    echo "Usage: $0 [with_bt]" >&2
     exit 2
     ;;
 esac

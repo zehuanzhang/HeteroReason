@@ -1,8 +1,11 @@
 from __future__ import annotations
 
 import json
+import sys
 import unittest
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from simulator.cli import run_datasets
 from simulator.trace_io import DATASETS
@@ -11,7 +14,6 @@ from simulator.trace_io import DATASETS
 HARDWARE_ROOT = Path(__file__).resolve().parents[1]
 CASES = (
     ("Config1", "with_bt", "config1.json", "with_bt"),
-    ("Config1", "no_bt", "config1_no_bt.json", "no_bt"),
 )
 
 

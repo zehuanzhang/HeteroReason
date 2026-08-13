@@ -1,18 +1,23 @@
 {
   "schema_version": 1,
   "name": "Config1",
-  "description": "0.5B W8A8 FPGA draft + 7B PRM GPU + 7B target GPU with target critical-token traces",
-  "semantics": "v11_critical_tokens",
+  "description": "Config1 v12 schedule: target rescue uses the existing prefetch window plus current verification, then target-output PRM, next draft, and next target prefetch run in parallel",
+  "semantics": "v12_rescue_serial_then_parallel",
   "parameters_ms": {
     "draft_alpha": 5.74,
-    "draft_beta": 0.004928,
-    "prm_alpha": 8.0,
-    "prm_beta": 0.0018,
-    "target_pre_beta": 0.0018,
-    "target_alpha": 23.16,
-    "target_gen_beta": 0.000084,
+    "draft_beta": 0.002464,
+    "prm_alpha": 14.415957692625284,
+    "prm_beta": 0.1948780118493466,
+    "target_pre_beta": 0.24499333805234357,
+    "target_alpha": 19.442100036975807,
+    "target_gen_beta": 0.0004155445761835332,
     "target_scale": 1.0,
     "bandwidth_gb_s": 16,
-    "bytes_per_token": 4
+    "bytes_per_token": 4,
+    "initial_gpu_prefill_ms": 0.0,
+    "initial_kv_transfer_ms": 0.0,
+    "draft_prefill_alpha": 16.123062162697437,
+    "draft_prefill_beta": 0.006210464885094716,
+    "draft_kv_bytes_per_token": 12288
   }
 }

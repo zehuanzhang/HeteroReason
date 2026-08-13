@@ -102,7 +102,7 @@ The FPGA performance model is cross-validated with the on-board FPGA performance
 #### 3.2.2 Trace-driven estimation
 
 Trace-driven estimation replays the execution traces collected from the algorithm runs. The simulator applies the recorded accept, target-rescue, and backtracking events, including pipeline overlap between draft execution and PRM/communication.
-Due to licensing issues with the RapidStream and TAPA tools, FPGA latency is scaled based on a projected operating frequency of 300 MHz and the higher number of KV ports supported by the FPGA board, incorporating the optimizations described in [r1]. The key Config1 performance model parameters used by the simulator are recorded in `Hardware/simulator/configs/config1.json` and `Hardware/simulator/configs/config1_no_bt.json`.
+Due to licensing issues with the RapidStream and TAPA tools, FPGA latency is scaled based on a projected operating frequency of 300 MHz and the higher number of KV ports supported by the FPGA board, incorporating the optimizations described in [r1]. The key Config1 performance model parameters used by the simulator are recorded in `Hardware/simulator/configs/config1.json`.
 
 [r1] Zhang J, He Z, Fraser N, et al. FlexLLM: Composable HLS Library for Flexible Hybrid LLM Accelerator Design[J]. arXiv preprint arXiv:2601.15710, 2026.
 
@@ -114,7 +114,6 @@ With the cross-validation with on-board FPGA performance, we build our end-to-en
 ```bash
 cd Hardware
 ./scripts/run_config1.sh with_bt
-./scripts/run_config1.sh no_bt
 ```
 
 
@@ -186,7 +185,6 @@ Config1 key simulator commands:
 ```bash
 cd Hardware
 ./scripts/run_config1.sh with_bt
-./scripts/run_config1.sh no_bt
 ```
 
 Plot command:
@@ -198,7 +196,7 @@ python3 scripts/plot_figure10.py
 
 Outputs: `Analysis/outputs/figure10_ablation.csv`, `Analysis/outputs/figure10.png`, and `Analysis/outputs/figure10.pdf`.
 
-For an exact-match hardware validation of the packaged Config1 cases, run `cd Hardware && ./scripts/reproduce_all.sh`; this check compares `with_bt` and `no_bt` with `Hardware/reference_results/simulator_reference.json`.
+For an exact-match hardware validation of the packaged Config1 case, run `cd Hardware && ./scripts/reproduce_all.sh`; this check compares `with_bt` with `Hardware/reference_results/simulator_reference.json`.
 
 
 ### 4.2 Data Flow
@@ -219,13 +217,13 @@ Figure 8:
 
 Figure 9:
   Beam1 and BBeam1 Algorithm metrics + with-backtracking simulator results
-    -> collect per-dataset latency for Config1 and Config2
+    -> collect per-dataset latency for Config1
     -> compute RSD latency / system latency
     -> Figure 9
 
 Figure 10:
   BBeam1 metrics + optimized GPU-pipeline metrics
-    -> with-backtracking and no-backtracking simulator results
+    -> with-backtracking simulator results
     -> compute adjacent-stage latency speedups
     -> Figure 10
 

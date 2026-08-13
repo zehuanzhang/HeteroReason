@@ -66,6 +66,9 @@ def write_csv(path: Path, result: Dict[str, Any]) -> None:
         "target_trace_events_used",
         "target_total_tokens",
         "target_critical_tokens",
+        "target_output_prm_events",
+        "target_output_prm_latency_s",
+        "target_output_prm_critical_latency_s",
         "input_sha256",
     )
     with path.open("w", encoding="utf-8", newline="") as handle:

@@ -12,7 +12,6 @@ from typing import Any, Dict
 HARDWARE_ROOT = Path(__file__).resolve().parents[1]
 CASES = (
     ("Config1", "with_bt", "config1_with_bt.json"),
-    ("Config1", "no_bt", "config1_no_bt.json"),
 )
 
 

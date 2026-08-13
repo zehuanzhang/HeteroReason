@@ -42,6 +42,10 @@ def load_trace_dataset(path: Path) -> Tuple[List[Dict[str, Any]], Dict[str, Any]
     for file_path in files:
         with file_path.open("r", encoding="utf-8") as handle:
             data = json.load(handle)
+        summary = data.get("summary", {})
+        prompt_tokens = int(data.get("prompt_tokens", summary.get("prompt_tokens", 0)))
+        if prompt_tokens < 0:
+            raise ValueError(f"Negative prompt token count in {file_path}")
 
         backtrack_target_events: Dict[int, List[Dict[str, Any]]] = {}
         for event in data.get("target_trace_events", []):
@@ -66,8 +70,11 @@ def load_trace_dataset(path: Path) -> Tuple[List[Dict[str, Any]], Dict[str, Any]
             has_target_trace = target_mode in TARGET_TRACE_MODES
             target_total = int(
                 target_trace.get(
-                    "target_tokens",
-                    target_trace.get("target_tokens_spent", target_tokens),
+                    "target_total_tokens",
+                    target_trace.get(
+                        "target_tokens",
+                        target_trace.get("target_tokens_spent", target_tokens),
+                    ),
                 )
             )
             target_critical = int(
@@ -83,6 +90,8 @@ def load_trace_dataset(path: Path) -> Tuple[List[Dict[str, Any]], Dict[str, Any]
             status_counts[status] += 1
             steps.append(
                 {
+                    "event_idx": int(step.get("event_idx", len(steps))),
+                    "logical_step": int(step.get("logical_step", len(steps))),
                     "tokens": tokens,
                     "target_tokens": target_tokens,
                     "target_total_tokens": target_total,
@@ -90,6 +99,11 @@ def load_trace_dataset(path: Path) -> Tuple[List[Dict[str, Any]], Dict[str, Any]
                     "target_mode": target_mode,
                     "has_target_trace": has_target_trace,
                     "status": status,
+                    "from_step": step.get("from_step"),
+                    "to_step": step.get("to_step"),
+                    "steps_dropped": step.get("steps_dropped"),
+                    "rollback_draft_tokens": step.get("rollback_draft_tokens"),
+                    "rollback_target_tokens": step.get("rollback_target_tokens"),
                 }
             )
 
@@ -102,7 +116,13 @@ def load_trace_dataset(path: Path) -> Tuple[List[Dict[str, Any]], Dict[str, Any]
                 "backtrack target events"
             )
 
-        logs.append({"example_id": data["idx"], "steps": steps})
+        logs.append(
+            {
+                "example_id": data["idx"],
+                "prompt_tokens": prompt_tokens,
+                "steps": steps,
+            }
+        )
 
     metadata = {
         "examples": len(files),
