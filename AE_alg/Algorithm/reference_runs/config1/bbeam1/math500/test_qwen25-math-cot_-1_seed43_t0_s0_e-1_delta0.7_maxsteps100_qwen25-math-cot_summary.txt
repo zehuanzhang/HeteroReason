@@ -1,0 +1,61 @@
+
+=== Average Per-Problem Metrics ===
+Average latency: 13.332 s
+Average target_intervene_pct: 21.08%
+Average total_steps: 12.18
+Average target_steps: 2.18
+Average per_step_latency: 1.345 s
+
+=== Dataset: math500 Summary ===
+Accuracy: 67.0
+Time: 113:36 (6816.84s)
+
+Time Distribution:
+  Total model time: 6616.47s
+  Draft model:  2332.99s (35.3%)
+  Target model: 3023.64s (45.7%)
+  PRM model:    1259.84s (19.0%)
+
+Model Throughput:
+Draft model:
+  Raw throughput:        109.90 tokens/sec (including rejected tokens)
+  Accepted throughput:   109.90 tokens/sec
+  Avg per-prompt speed:  210.93 tokens/sec/prompt (throughput-based)
+  Max per-prompt speed:  210.93 tokens/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          3762032 (581.6 avg per prompt)
+  Output tokens:         468472
+  Total: 256388 tokens (256388 accepted + 0 rejected) in 2332.99s
+
+Target model:
+  Raw throughput:        31.26 tokens/sec (batched)
+  Avg per-prompt speed:  44.88 tokens/sec/prompt (throughput-based)
+  Max per-prompt speed:  44.88 tokens/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          801263 (538.1 avg per prompt)
+  Output tokens:         139287
+  Total: 1035081 tokens in 3023.64s
+
+PRM model:
+  Input throughput:      3872.70 tokens/sec (batched)
+  Output throughput:     60.90 rewards/sec
+  Input per-prompt speeds:
+    Avg per-prompt:      4048.88 tokens/sec/prompt (throughput-based)
+    Max per-prompt:      4048.88 tokens/sec/prompt (latency-based)
+  Output per-prompt speeds:
+    Avg per-prompt:      64.98 rewards/sec/prompt (throughput-based)
+    Max per-prompt:      64.98 rewards/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          4879001 (613.2 avg per prompt)
+  Output tokens:         76723 (reward scores)
+  Total: 4879001 tokens in 1259.84s
+
+Token Usage:
+Draft accepted:  256388 tokens
+Draft rejected:  0 tokens
+Target used:     94531 tokens
+Draft acceptance rate: 100.0%
+
+Correct predictions used 169260 tokens
+Wrong predictions used 181659 tokens
+==================================================

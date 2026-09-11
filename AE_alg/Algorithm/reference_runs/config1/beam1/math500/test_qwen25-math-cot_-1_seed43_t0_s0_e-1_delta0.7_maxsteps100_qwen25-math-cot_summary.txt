@@ -1,0 +1,61 @@
+
+=== Average Per-Problem Metrics ===
+Average latency: 9.627 s
+Average target_intervene_pct: 19.81%
+Average total_steps: 11.74
+Average target_steps: 2.01
+Average per_step_latency: 0.999 s
+
+=== Dataset: math500 Summary ===
+Accuracy: 64.8
+Time: 81:52 (4912.88s)
+
+Time Distribution:
+  Total model time: 4785.92s
+  Draft model:  2021.03s (42.2%)
+  Target model: 1939.92s (40.5%)
+  PRM model:    824.96s (17.2%)
+
+Model Throughput:
+Draft model:
+  Raw throughput:        125.39 tokens/sec (including rejected tokens)
+  Accepted throughput:   125.39 tokens/sec
+  Avg per-prompt speed:  253.51 tokens/sec/prompt (throughput-based)
+  Max per-prompt speed:  253.51 tokens/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          3244827 (553.0 avg per prompt)
+  Output tokens:         413302
+  Total: 253421 tokens (253421 accepted + 0 rejected) in 2021.03s
+
+Target model:
+  Raw throughput:        48.04 tokens/sec (batched)
+  Avg per-prompt speed:  46.77 tokens/sec/prompt (throughput-based)
+  Max per-prompt speed:  46.77 tokens/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          517449 (514.9 avg per prompt)
+  Output tokens:         93197
+  Total: 703843 tokens in 1939.92s
+
+PRM model:
+  Input throughput:      4174.84 tokens/sec (batched)
+  Output throughput:     69.13 rewards/sec
+  Input per-prompt speeds:
+    Avg per-prompt:      4090.65 tokens/sec/prompt (throughput-based)
+    Max per-prompt:      4090.65 tokens/sec/prompt (latency-based)
+  Output per-prompt speeds:
+    Avg per-prompt:      69.64 rewards/sec/prompt (throughput-based)
+    Max per-prompt:      69.64 rewards/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          3444089 (586.9 avg per prompt)
+  Output tokens:         57033 (reward scores)
+  Total: 3444089 tokens in 824.96s
+
+Token Usage:
+Draft accepted:  253421 tokens
+Draft rejected:  0 tokens
+Target used:     93197 tokens
+Draft acceptance rate: 100.0%
+
+Correct predictions used 163327 tokens
+Wrong predictions used 183291 tokens
+==================================================

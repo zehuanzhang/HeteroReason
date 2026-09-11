@@ -1,0 +1,74 @@
+
+=== Average Per-Problem Metrics ===
+Average latency: 3.977 s
+Average target_intervene_pct: 14.80%
+Average total_steps: 7.08
+Average target_steps: 1.11
+Average per_step_latency: 0.554 s
+
+=== Dataset: gsm8k Summary ===
+Accuracy: 89.0
+Time: 91:57 (5517.28s)
+
+Time Distribution:
+  Total model time: 5930.76s
+  Draft model:  1969.56s (33.2%)
+  Target model: 2068.12s (34.9%)
+  PRM model:    1893.08s (31.9%)
+
+Draft Pipeline Timing:
+  Start calls:                 9470
+  Consume calls:               9470
+  Reused tokens:               335783
+  Reused actual draft latency: 1250.013s
+  Wasted tokens:               29541
+  Wasted latency (PRM window): 373.502s
+  Wasted actual draft latency: 112.191s
+  Wasted latency overhead:     3.145s
+  Unused completion tokens:    21696
+  Unused completion latency:   83.559s
+  Event count:                 9470
+
+Model Throughput:
+Draft model:
+  Raw throughput:        166.74 tokens/sec (including rejected tokens)
+  Accepted throughput:   166.74 tokens/sec
+  Avg per-prompt speed:  253.17 tokens/sec/prompt (throughput-based)
+  Max per-prompt speed:  253.17 tokens/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          3722617 (304.5 avg per prompt)
+  Output tokens:         502293
+  Total: 328411 tokens (328411 accepted + 0 rejected) in 1969.56s
+
+Target model:
+  Raw throughput:        39.81 tokens/sec (batched)
+  Avg per-prompt speed:  45.36 tokens/sec/prompt (throughput-based)
+  Max per-prompt speed:  45.36 tokens/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          563278 (290.6 avg per prompt)
+  Output tokens:         100102
+  Total: 745721 tokens in 2068.12s
+
+PRM model:
+  Input throughput:      1650.71 tokens/sec (batched)
+  Output throughput:     28.33 rewards/sec
+  Input per-prompt speeds:
+    Avg per-prompt:      3606.63 tokens/sec/prompt (throughput-based)
+    Max per-prompt:      3606.63 tokens/sec/prompt (latency-based)
+  Output per-prompt speeds:
+    Avg per-prompt:      59.93 rewards/sec/prompt (throughput-based)
+    Max per-prompt:      59.93 rewards/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          3124920 (282.0 avg per prompt)
+  Output tokens:         53622 (reward scores)
+  Total: 3124920 tokens in 1893.08s
+
+Token Usage:
+Draft accepted:  328411 tokens
+Draft rejected:  0 tokens
+Target used:     82341 tokens
+Draft acceptance rate: 100.0%
+
+Correct predictions used 348894 tokens
+Wrong predictions used 61858 tokens
+==================================================

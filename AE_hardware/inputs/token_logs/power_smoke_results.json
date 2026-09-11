@@ -1,0 +1,17 @@
+{
+  "description": "Smoke-measured busy-average system power for Figure 8 energy-efficiency plots.",
+  "config1": {
+    "three_gpu_system_w": 551.1899999999998,
+    "fpga_gpu_gpu_system_w": 488.4176404494383,
+    "draft_gpu_w": 137.7723595505618,
+    "prm_gpu_w": 156.82865168539328,
+    "target_gpu_w": 256.588988764045
+  },
+  "config2": {
+    "three_gpu_system_w": 506.54876712328775,
+    "fpga_gpu_gpu_system_w": 438.08931506849314,
+    "draft_gpu_w": 143.4594520547945,
+    "prm_gpu_w": 177.36000000000004,
+    "target_gpu_w": 185.72931506849312
+  }
+}

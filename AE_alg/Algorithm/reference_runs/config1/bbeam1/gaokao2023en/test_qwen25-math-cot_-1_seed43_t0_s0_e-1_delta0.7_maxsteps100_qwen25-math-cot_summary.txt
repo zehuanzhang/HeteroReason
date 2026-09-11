@@ -1,0 +1,61 @@
+
+=== Average Per-Problem Metrics ===
+Average latency: 13.827 s
+Average target_intervene_pct: 22.10%
+Average total_steps: 11.17
+Average target_steps: 2.22
+Average per_step_latency: 1.411 s
+
+=== Dataset: gaokao2023en Summary ===
+Accuracy: 58.4
+Time: 90:19 (5419.30s)
+
+Time Distribution:
+  Total model time: 5293.12s
+  Draft model:  1893.51s (35.8%)
+  Target model: 2569.15s (48.5%)
+  PRM model:    830.46s (15.7%)
+
+Model Throughput:
+Draft model:
+  Raw throughput:        91.14 tokens/sec (including rejected tokens)
+  Accepted throughput:   91.14 tokens/sec
+  Avg per-prompt speed:  230.76 tokens/sec/prompt (throughput-based)
+  Max per-prompt speed:  230.76 tokens/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          2417849 (532.4 avg per prompt)
+  Output tokens:         359106
+  Total: 172577 tokens (172577 accepted + 0 rejected) in 1893.51s
+
+Target model:
+  Raw throughput:        32.31 tokens/sec (batched)
+  Avg per-prompt speed:  46.13 tokens/sec/prompt (throughput-based)
+  Max per-prompt speed:  46.13 tokens/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          540334 (484.2 avg per prompt)
+  Output tokens:         121914
+  Total: 745266 tokens in 2569.15s
+
+PRM model:
+  Input throughput:      3883.20 tokens/sec (batched)
+  Output throughput:     61.94 rewards/sec
+  Input per-prompt speeds:
+    Avg per-prompt:      4030.81 tokens/sec/prompt (throughput-based)
+    Max per-prompt:      4030.81 tokens/sec/prompt (latency-based)
+  Output per-prompt speeds:
+    Avg per-prompt:      63.62 rewards/sec/prompt (throughput-based)
+    Max per-prompt:      63.62 rewards/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          3224831 (570.1 avg per prompt)
+  Output tokens:         51439 (reward scores)
+  Total: 3224831 tokens in 830.46s
+
+Token Usage:
+Draft accepted:  172577 tokens
+Draft rejected:  0 tokens
+Target used:     83018 tokens
+Draft acceptance rate: 100.0%
+
+Correct predictions used 114755 tokens
+Wrong predictions used 140840 tokens
+==================================================

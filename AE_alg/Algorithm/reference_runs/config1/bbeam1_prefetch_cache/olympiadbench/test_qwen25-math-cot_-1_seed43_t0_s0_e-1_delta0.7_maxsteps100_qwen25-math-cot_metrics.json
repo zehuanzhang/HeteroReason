@@ -1,0 +1,66 @@
+{
+    "num_samples": 675,
+    "num_scores": 675,
+    "timeout_samples": 0,
+    "empty_samples": 0,
+    "acc": 27.9,
+    "avg_problem_latency": 19.635368860032823,
+    "avg_target_intervene_pct": 0.3437420392031373,
+    "avg_steps_per_problem": 15.702222222222222,
+    "avg_per_step_latency": 1.6486228929567612,
+    "time_use_in_second": 13401.391280651093,
+    "time_use_in_minite": "223:21",
+    "draft_time": 4524.166343688965,
+    "target_time": 8005.053466558456,
+    "prm_time": 2668.8324933052063,
+    "prefetch_consume_time": 4545.121320962906,
+    "prefetch_consume_calls": 3477,
+    "prefetch_collect_wait_time": 4543.461227655411,
+    "prefetch_collect_calls": 3436,
+    "prefetch_stop_time": 1.5172679424285889,
+    "prefetch_stop_calls": 11229,
+    "prefetch_stop_request_time": 1.4754154682159424,
+    "prefetch_stop_requests": 8356,
+    "prefetch_start_time": 427.95133423805237,
+    "prefetch_start_calls": 11229,
+    "draft_tokens": 455917,
+    "target_tokens": 228313,
+    "prm_tokens": 10640178,
+    "draft_tokens_per_sec": 100.77370400758726,
+    "target_tokens_per_sec": 28.521108691377254,
+    "prm_tokens_per_sec": 3986.8287075681956,
+    "draft_input_tokens": 7814033,
+    "draft_output_tokens": 1037414,
+    "target_input_tokens": 3070902,
+    "target_output_tokens": 376043,
+    "prm_input_tokens": 10640178,
+    "prm_output_tokens": 169627,
+    "prm_output_tokens_per_sec": 63.558503737312506,
+    "draft_time_percentage": 29.76806667938244,
+    "target_time_percentage": 52.67157466412476,
+    "prm_time_percentage": 17.560358656492795,
+    "total_model_time": 15198.052303552628,
+    "tokens_ratio_overall(llm1,llm2)": [
+        0.666321266240884,
+        0.3336787337591161
+    ],
+    "tokens_ratio_correct_prediction(llm1,llm2)": [
+        0.6168448181863239,
+        0.3831551818136761
+    ],
+    "tokens_ratio_wrong_prediction(llm1,llm2)": [
+        0.676956595853487,
+        0.32304340414651295
+    ],
+    "tokens_ratio(correct,wrong)": [
+        0.1769258874939713,
+        0.8230741125060287
+    ],
+    "tokens_ratio_discarded(correct,wrong)": [
+        0.0,
+        0.0
+    ],
+    "acceptance_rate": 1.0,
+    "num_draft_tokens": 455917,
+    "num_target_tokens": 228313
+}

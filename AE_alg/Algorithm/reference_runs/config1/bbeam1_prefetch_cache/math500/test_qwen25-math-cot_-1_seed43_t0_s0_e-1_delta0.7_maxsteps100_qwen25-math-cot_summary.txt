@@ -1,0 +1,61 @@
+
+=== Average Per-Problem Metrics ===
+Average latency: 12.559 s
+Average target_intervene_pct: 22.05%
+Average total_steps: 12.25
+Average target_steps: 2.41
+Average per_step_latency: 1.214 s
+
+=== Dataset: math500 Summary ===
+Accuracy: 67.2
+Time: 106:50 (6410.07s)
+
+Time Distribution:
+  Total model time: 6871.96s
+  Draft model:  2275.53s (33.1%)
+  Target model: 3123.03s (45.4%)
+  PRM model:    1473.40s (21.4%)
+
+Model Throughput:
+Draft model:
+  Raw throughput:        111.40 tokens/sec (including rejected tokens)
+  Accepted throughput:   111.40 tokens/sec
+  Avg per-prompt speed:  231.19 tokens/sec/prompt (throughput-based)
+  Max per-prompt speed:  231.19 tokens/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          3629341 (569.6 avg per prompt)
+  Output tokens:         472352
+  Total: 253483 tokens (253483 accepted + 0 rejected) in 2275.53s
+
+Target model:
+  Raw throughput:        30.42 tokens/sec (batched)
+  Avg per-prompt speed:  42.14 tokens/sec/prompt (throughput-based)
+  Max per-prompt speed:  42.14 tokens/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          1192154 (591.6 avg per prompt)
+  Output tokens:         144181
+  Total: 1431337 tokens in 3123.03s
+
+PRM model:
+  Input throughput:      3221.14 tokens/sec (batched)
+  Output throughput:     49.36 rewards/sec
+  Input per-prompt speeds:
+    Avg per-prompt:      4053.43 tokens/sec/prompt (throughput-based)
+    Max per-prompt:      4053.43 tokens/sec/prompt (latency-based)
+  Output per-prompt speeds:
+    Avg per-prompt:      64.21 rewards/sec/prompt (throughput-based)
+    Max per-prompt:      64.21 rewards/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          4746041 (604.4 avg per prompt)
+  Output tokens:         72726 (reward scores)
+  Total: 4746041 tokens in 1473.40s
+
+Token Usage:
+Draft accepted:  253483 tokens
+Draft rejected:  0 tokens
+Target used:     95002 tokens
+Draft acceptance rate: 100.0%
+
+Correct predictions used 166505 tokens
+Wrong predictions used 181980 tokens
+==================================================

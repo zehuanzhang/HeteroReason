@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "manuscript_result": "Table 3: Accuracy results across model configurations",
+  "metric": "accuracy_percent",
+  "average_note": "Config1 values are computed from the bundled artifact rerun metrics in Algorithm/reference_runs/config1. Averages are arithmetic means across the four datasets.",
+  "dataset_order": [
+    "gaokao2023en",
+    "gsm8k",
+    "math500",
+    "olympiadbench"
+  ],
+  "parameters": {
+    "prm_threshold": 0.7,
+    "seed": 43,
+    "beam_width": 1,
+    "beam_expansion_factor": 1,
+    "search_temperature": 0.0,
+    "max_steps": 100
+  },
+  "method_mapping": {
+    "RSD (baseline)": "beam1",
+    "BRSD": "bbeam1",
+    "BRSD + optimizations": "bbeam1_prefetch_cache"
+  },
+  "configurations": {
+    "Config1": {
+      "models": "0.5B draft - 7B PRM - 7B target",
+      "methods": {
+        "RSD (baseline)": {
+          "datasets": {
+            "gaokao2023en": 56.9,
+            "gsm8k": 87.3,
+            "math500": 64.8,
+            "olympiadbench": 26.5
+          },
+          "average": 58.875,
+          "delta_average": null
+        },
+        "BRSD": {
+          "datasets": {
+            "gaokao2023en": 58.4,
+            "gsm8k": 89.5,
+            "math500": 67.0,
+            "olympiadbench": 28.6
+          },
+          "average": 60.875,
+          "delta_average": 2.0
+        },
+        "BRSD + optimizations": {
+          "datasets": {
+            "gaokao2023en": 57.9,
+            "gsm8k": 89.3,
+            "math500": 67.2,
+            "olympiadbench": 27.9
+          },
+          "average": 60.575,
+          "delta_average": 1.7
+        }
+      }
+    },
+    "Config2": {
+      "models": "0.5B draft - 7B PRM - 1.5B target",
+      "methods": {
+        "RSD (baseline)": {
+          "datasets": {
+            "gaokao2023en": 51.4,
+            "gsm8k": 70.6,
+            "math500": 44.2,
+            "olympiadbench": 16.6
+          },
+          "average": 45.7,
+          "delta_average": null
+        },
+        "BRSD": {
+          "datasets": {
+            "gaokao2023en": 55.2,
+            "gsm8k": 78.2,
+            "math500": 47.8,
+            "olympiadbench": 21.0
+          },
+          "average": 50.5,
+          "delta_average": 4.8
+        },
+        "BRSD + optimizations": {
+          "datasets": {
+            "gaokao2023en": 54.6,
+            "gsm8k": 77.6,
+            "math500": 47.5,
+            "olympiadbench": 20.9
+          },
+          "average": 50.1,
+          "delta_average": 4.4
+        }
+      }
+    }
+  },
+  "representative_key_result": {
+    "configuration": "Config1",
+    "dataset": "math500",
+    "dataset_examples": 500,
+    "default_method": "BRSD + optimizations",
+    "observed_environment": "3x NVIDIA GeForce RTX 3090 (24 GB)",
+    "methods": {
+      "RSD (baseline)": {
+        "accuracy_percent": 64.8,
+        "wall_clock_seconds": 4912.880866527557,
+        "wall_clock_display": "81:52",
+        "average_problem_latency_seconds": 9.626896847248078,
+        "source_metrics_sha256": "6eedf87d2a10d53683f9dac0a880235e41ebc8d9bc1a78c0435ce79cedc964f4"
+      },
+      "BRSD": {
+        "accuracy_percent": 67.0,
+        "wall_clock_seconds": 6816.841187953949,
+        "wall_clock_display": "113:36",
+        "average_problem_latency_seconds": 13.332143082618714,
+        "source_metrics_sha256": "cfbcf9542a14d3c2c36347fe76fec803391c3fbe6f834d41c6c8c01d52a6f6b1"
+      },
+      "BRSD + optimizations": {
+        "accuracy_percent": 67.2,
+        "wall_clock_seconds": 6410.065415859222,
+        "wall_clock_display": "106:50",
+        "average_problem_latency_seconds": 12.558625140666962,
+        "source_metrics_sha256": "459814984d7a9c2822a84e83e111622b33be270486f09acc3ccf93081fc8f4f3",
+        "prefetch_start_calls": 6372,
+        "prefetch_collect_calls": 1472,
+        "prefetch_stop_requests": 5107
+      }
+    },
+    "default_observed_wall_clock_seconds": 6410.065415859222,
+    "default_observed_wall_clock_display": "106:50",
+    "total_observed_wall_clock_seconds": 18139.78747034073,
+    "total_observed_wall_clock_display": "5:02:20"
+  }
+}

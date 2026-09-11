@@ -2,7 +2,11 @@
 *.py[cod]
 .DS_Store
 
-Algorithm/results/
-Algorithm/logs/
-Hardware/generated_results/
-Analysis/outputs/
+# Locally generated algorithm outputs are not part of the source bundle.
+AE_alg/Algorithm/results/
+AE_alg/Algorithm/logs/
+
+# Local test and coverage artifacts.
+.pytest_cache/
+.coverage
+htmlcov/

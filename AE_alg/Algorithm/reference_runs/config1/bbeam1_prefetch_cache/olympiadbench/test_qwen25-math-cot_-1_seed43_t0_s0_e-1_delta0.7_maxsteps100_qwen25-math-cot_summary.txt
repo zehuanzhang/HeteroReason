@@ -1,0 +1,61 @@
+
+=== Average Per-Problem Metrics ===
+Average latency: 19.635 s
+Average target_intervene_pct: 34.37%
+Average total_steps: 15.70
+Average target_steps: 4.09
+Average per_step_latency: 1.649 s
+
+=== Dataset: olympiadbench Summary ===
+Accuracy: 27.9
+Time: 223:21 (13401.39s)
+
+Time Distribution:
+  Total model time: 15198.05s
+  Draft model:  4524.17s (29.8%)
+  Target model: 8005.05s (52.7%)
+  PRM model:    2668.83s (17.6%)
+
+Model Throughput:
+Draft model:
+  Raw throughput:        100.77 tokens/sec (including rejected tokens)
+  Accepted throughput:   100.77 tokens/sec
+  Avg per-prompt speed:  246.80 tokens/sec/prompt (throughput-based)
+  Max per-prompt speed:  246.80 tokens/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          7814033 (695.9 avg per prompt)
+  Output tokens:         1037414
+  Total: 455917 tokens (455917 accepted + 0 rejected) in 4524.17s
+
+Target model:
+  Raw throughput:        28.52 tokens/sec (batched)
+  Avg per-prompt speed:  42.28 tokens/sec/prompt (throughput-based)
+  Max per-prompt speed:  42.28 tokens/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          3070902 (634.6 avg per prompt)
+  Output tokens:         376043
+  Total: 3675258 tokens in 8005.05s
+
+PRM model:
+  Input throughput:      3986.83 tokens/sec (batched)
+  Output throughput:     63.56 rewards/sec
+  Input per-prompt speeds:
+    Avg per-prompt:      4260.76 tokens/sec/prompt (throughput-based)
+    Max per-prompt:      4260.76 tokens/sec/prompt (latency-based)
+  Output per-prompt speeds:
+    Avg per-prompt:      66.20 rewards/sec/prompt (throughput-based)
+    Max per-prompt:      66.20 rewards/sec/prompt (latency-based)
+  Average batch size:    1.0
+  Input tokens:          10640178 (723.5 avg per prompt)
+  Output tokens:         169627 (reward scores)
+  Total: 10640178 tokens in 2668.83s
+
+Token Usage:
+Draft accepted:  455917 tokens
+Draft rejected:  0 tokens
+Target used:     228313 tokens
+Draft acceptance rate: 100.0%
+
+Correct predictions used 121058 tokens
+Wrong predictions used 563172 tokens
+==================================================

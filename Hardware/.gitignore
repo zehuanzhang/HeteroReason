@@ -1,4 +1,0 @@
-**/__pycache__/
-*.py[cod]
-generated_results/*.json
-generated_results/*.csv

@@ -1,0 +1,110 @@
+\section{Artifact Appendix}
+\label{app:artifact_alghard}
+
+\subsection{Abstract}
+The artifact contains several components. The algorithmic
+component reproduces the Table~\ref{tab:alg} accuracy results for vanilla RSD,
+backtracking-enhanced RSD (BRSD), and BRSD with optimizations. The hardware
+component provides a trace-driven simulator and plotting workflow for
+reproducing the Figure~\ref{fig:5_end2end} latency, goodput, and energy results from packaged
+CSV/JSONL inputs without rerunning model inference.
+
+\subsection{Artifact Check-list}
+\begin{itemize}[leftmargin=*, itemsep=1pt]
+  \item \textbf{Algorithm:} speculative reasoning with RSD, BRSD, and BRSD with optimized execution.
+  \item \textbf{Program:} Python scripts, shell runners, step-profile CSVs, JSONL token logs, reference result summaries, and plotting utilities.
+  \item \textbf{Models:} Qwen2.5 0.5B draft, Qwen2.5-Math-PRM-7B, Qwen2.5 7B target, and Qwen2.5 1.5B target. Model checkpoints are not redistributed.
+  \item \textbf{Datasets:} Math500, GSM8K, Gaokao2023EN, and OlympiadBench.
+  \item \textbf{Compute platform:} Algorithmic runs use 3$\times$ NVIDIA RTX 3090 GPUs in the reference setup. The packaged hardware simulator and Figure~\ref{fig:5_end2end} plotting workflow run from CSV/JSONL traces and do not require GPUs.
+  \item \textbf{Expected time:} The algorithmic smoke test takes a few minutes after model initialization; the Config1/Math500 key result takes about 1--2 hours; the full algorithmic workflow can take about 1--2 days depending on GPU availability. The packaged hardware plotting workflow takes seconds, and regenerating simulator CSVs from the packaged traces takes minutes.
+  
+\end{itemize}
+
+\subsection{Description}
+The artifact codebase: \url{https://zenodo.org/records/22015981} or \url{https://github.com/zehuanzhang/HeteroReason}.
+The artifact is organized into several directories. \texttt{AE\_alg}
+contains the algorithmic reproduction workflow under \texttt{Algorithm}.
+\texttt{AE\_hardware} contains the communication-aware trace-driven
+latency/energy simulator, packaged step-profile CSVs and logs, and precomputed
+simulator outputs. \texttt{AE\_hardware\_V80} is the V80 projection of the
+same simulator. The root-level \texttt{figure8} directory contains the final
+four-bar plotting script and its packaged metric inputs.
+
+The three Table~\ref{tab:alg} algorithmic methods are:
+\begin{itemize}[leftmargin=*, itemsep=1pt]
+  \item \texttt{rsd}: the vanilla speculative reasoning baseline.
+  \item \texttt{brsd}: RSD with backtracking.
+  \item \texttt{brsd\_optimized}: BRSD with the optimizations.
+\end{itemize}
+These correspond to the implementation names \texttt{beam1},
+\texttt{bbeam1}, and \texttt{bbeam1\_prefetch\_cache}, respectively.
+
+\subsection{Installation}
+After downloading the artifact, install the Python dependencies and set local
+model paths for algorithmic reproduction:
+{\footnotesize
+\begin{verbatim}
+pip install -r AE_alg/requirements.txt
+export DRAFT_MODEL=/path/to/Qwen2.5-0.5B-Instruct
+export PRM_MODEL=/path/to/Qwen2.5-Math-PRM-7B
+export CONFIG1_TARGET_MODEL=/path/to/Qwen2.5-7B-Instruct
+export CONFIG2_TARGET_MODEL=/path/to/Qwen2.5-1.5B-Instruct
+export CUDA_VISIBLE_DEVICES=0,1,2
+\end{verbatim}
+}
+The hardware simulator and Figure~\ref{fig:5_end2end} plotting workflow use packaged CSV/JSONL
+inputs and do not require model checkpoints.
+
+\subsection{Algorithmic Experiment Workflow}
+The smoke test validates the environment by running the three Table~\ref{tab:alg} methods
+on eight fixed Config1/Math500 examples:
+\begin{verbatim}
+cd AE_alg/Algorithm
+bash run_smoke.sh
+\end{verbatim}
+
+The key-result workflow focuses on Config1/Math500. The default key-result
+command runs \texttt{brsd\_optimized}; reviewers may also run the three methods
+separately:
+\begin{verbatim}
+cd AE_alg/Algorithm
+bash run_key_results.sh
+
+KEY_METHODS="rsd" bash run_key_results.sh
+KEY_METHODS="brsd" bash run_key_results.sh
+KEY_METHODS="brsd_optimized" bash run_key_results.sh
+\end{verbatim}
+
+The full algorithmic workflow reproduces Table~\ref{tab:alg} across both configurations,
+all four datasets, and all three methods:
+\begin{verbatim}
+cd AE_alg/Algorithm
+bash run_full_results.sh
+\end{verbatim}
+
+\subsection{Hardware Simulator and Figure Workflow}
+The hardware component can reproduce Figure~\ref{fig:5_end2end} without
+rerunning model inference:
+\begin{verbatim}
+python figure8/plot_figure8.py --normalized
+\end{verbatim}
+
+
+\subsection{Evaluation and Expected Results}
+The algorithmic smoke test reports per-method accuracy and latency on the fixed
+eight-example subset. The key-result workflow reproduces the Config1/Math500
+Table~\ref{tab:alg} entries, with \texttt{brsd\_optimized} as the recommended artifact
+result. The full workflow reproduces all Table~\ref{tab:alg} algorithmic accuracy values
+across Config1 and Config2.
+
+The hardware workflow regenerates Figure~\ref{fig:5_end2end} and the corresponding
+CSV/JSON metric summaries. The
+expected metrics include average latency, goodput, and average energy per
+problem.
+
+\subsection{Notes}
+Algorithmic latency is platform-dependent and can vary with GPU
+types. The hardware simulator
+and plotting workflow are deterministic for the supplied CSV/JSONL inputs. Model
+checkpoints are referenced by local paths or Hugging Face identifiers and are
+not redistributed with the artifact.

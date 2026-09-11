@@ -1,0 +1,286 @@
+{
+  "configs": {
+    "Config1": {
+      "datasets": {
+        "gaokao2023en": {
+          "ours_u280": {
+            "avg_energy_kj_per_problem": 5.461909575988098,
+            "avg_latency_s": 9.300573603202404,
+            "throughput_tokens_s": 71.3926082541382
+          },
+          "ours_v80": {
+            "avg_energy_kj_per_problem": 5.336010656039864,
+            "avg_latency_s": 8.121225135565588,
+            "throughput_tokens_s": 81.76010351989402
+          },
+          "strong_baseline": {
+            "avg_energy_kj_per_problem": 6.134466512881964,
+            "avg_latency_s": 7.918853588452287,
+            "throughput_tokens_s": 83.84953710477463
+          },
+          "weak_baseline": {
+            "avg_energy_kj_per_problem": 7.230327021705851,
+            "avg_latency_s": 10.343981079359713,
+            "throughput_tokens_s": 64.1911661185394
+          }
+        },
+        "gsm8k": {
+          "ours_u280": {
+            "avg_energy_kj_per_problem": 2.1674086469640717,
+            "avg_latency_s": 3.8317263190831166,
+            "throughput_tokens_s": 81.74478764926472
+          },
+          "ours_v80": {
+            "avg_energy_kj_per_problem": 2.0557536209764065,
+            "avg_latency_s": 3.1888676161157963,
+            "throughput_tokens_s": 98.22410083773579
+          },
+          "strong_baseline": {
+            "avg_energy_kj_per_problem": 2.509238854904071,
+            "avg_latency_s": 3.2210039882624564,
+            "throughput_tokens_s": 97.24410631745725
+          },
+          "weak_baseline": {
+            "avg_energy_kj_per_problem": 2.817452846466683,
+            "avg_latency_s": 4.030796062431942,
+            "throughput_tokens_s": 77.7076412282113
+          }
+        },
+        "math500": {
+          "ours_u280": {
+            "avg_energy_kj_per_problem": 5.3450014603322185,
+            "avg_latency_s": 9.203294689917424,
+            "throughput_tokens_s": 76.23900175321839
+          },
+          "ours_v80": {
+            "avg_energy_kj_per_problem": 5.16746745570351,
+            "avg_latency_s": 7.9088714261803945,
+            "throughput_tokens_s": 88.71682977135757
+          },
+          "strong_baseline": {
+            "avg_energy_kj_per_problem": 5.91906262069206,
+            "avg_latency_s": 7.628222051011693,
+            "throughput_tokens_s": 91.98080434836629
+          },
+          "weak_baseline": {
+            "avg_energy_kj_per_problem": 7.083250315255702,
+            "avg_latency_s": 10.133585644118085,
+            "throughput_tokens_s": 69.24005230145403
+          }
+        },
+        "olympiadbench": {
+          "ours_u280": {
+            "avg_energy_kj_per_problem": 9.211124515104116,
+            "avg_latency_s": 15.602477230364562,
+            "throughput_tokens_s": 64.81344952084521
+          },
+          "ours_v80": {
+            "avg_energy_kj_per_problem": 9.126817804368459,
+            "avg_latency_s": 13.875546240110985,
+            "throughput_tokens_s": 72.88004038695645
+          },
+          "strong_baseline": {
+            "avg_energy_kj_per_problem": 10.19724442417193,
+            "avg_latency_s": 13.253108742918814,
+            "throughput_tokens_s": 76.30288032690332
+          },
+          "weak_baseline": {
+            "avg_energy_kj_per_problem": 12.175151422068453,
+            "avg_latency_s": 17.418181231487942,
+            "throughput_tokens_s": 58.057173532117666
+          }
+        }
+      },
+      "mean_of_datasets": {
+        "ours_u280": {
+          "avg_energy_kj_per_problem": 5.546361049597126,
+          "avg_latency_s": 9.484517960641876,
+          "throughput_tokens_s": 73.54746179436663
+        },
+        "ours_v80": {
+          "avg_energy_kj_per_problem": 5.421512384272059,
+          "avg_latency_s": 8.273627604493191,
+          "throughput_tokens_s": 85.39526862898596
+        },
+        "strong_baseline": {
+          "avg_energy_kj_per_problem": 6.190003103162507,
+          "avg_latency_s": 8.005297092661312,
+          "throughput_tokens_s": 87.34433202437538
+        },
+        "weak_baseline": {
+          "avg_energy_kj_per_problem": 7.326545401374172,
+          "avg_latency_s": 10.48163600434942,
+          "throughput_tokens_s": 67.2990082950806
+        }
+      },
+      "pooled_total": {
+        "ours_u280": {
+          "avg_energy_kj_per_problem": 4.811273695714628,
+          "avg_latency_s": 8.255674653545798,
+          "throughput_tokens_s": 71.61695329292883
+        },
+        "ours_v80": {
+          "avg_energy_kj_per_problem": 4.692684569101664,
+          "avg_latency_s": 7.173746956587217,
+          "throughput_tokens_s": 82.41805428078281
+        },
+        "strong_baseline": {
+          "avg_energy_kj_per_problem": 5.388720720298753,
+          "avg_latency_s": 6.966732309499255,
+          "throughput_tokens_s": 84.86708542804661
+        },
+        "weak_baseline": {
+          "avg_energy_kj_per_problem": 6.342392697245698,
+          "avg_latency_s": 9.073677622512895,
+          "throughput_tokens_s": 65.16059867474816
+        }
+      },
+      "title": "Config1: 0.5B draft - 7B PRM - 7B Target",
+      "warnings": []
+    },
+    "Config2": {
+      "datasets": {
+        "gaokao2023en": {
+          "ours_u280": {
+            "avg_energy_kj_per_problem": 4.276076035959296,
+            "avg_latency_s": 8.37758469494278,
+            "throughput_tokens_s": 86.04407889504266
+          },
+          "ours_v80": {
+            "avg_energy_kj_per_problem": 3.9394926392810294,
+            "avg_latency_s": 6.745370653621447,
+            "throughput_tokens_s": 106.8646328655867
+          },
+          "strong_baseline": {
+            "avg_energy_kj_per_problem": 4.935430850715697,
+            "avg_latency_s": 6.676664537571174,
+            "throughput_tokens_s": 107.9643217635411
+          },
+          "weak_baseline": {
+            "avg_energy_kj_per_problem": 5.775555326552197,
+            "avg_latency_s": 9.076530997651115,
+            "throughput_tokens_s": 79.4181784459396
+          }
+        },
+        "gsm8k": {
+          "ours_u280": {
+            "avg_energy_kj_per_problem": 1.7450658103887406,
+            "avg_latency_s": 3.5111671999687135,
+            "throughput_tokens_s": 90.58479971036148
+          },
+          "ours_v80": {
+            "avg_energy_kj_per_problem": 1.5139179746341083,
+            "avg_latency_s": 2.6266998557976926,
+            "throughput_tokens_s": 121.0866848211581
+          },
+          "strong_baseline": {
+            "avg_energy_kj_per_problem": 2.029618626441611,
+            "avg_latency_s": 2.7729395446220573,
+            "throughput_tokens_s": 114.70079763390837
+          },
+          "weak_baseline": {
+            "avg_energy_kj_per_problem": 2.381442240551383,
+            "avg_latency_s": 3.7346184888784215,
+            "throughput_tokens_s": 85.1648912749521
+          }
+        },
+        "math500": {
+          "ours_u280": {
+            "avg_energy_kj_per_problem": 4.058732138132144,
+            "avg_latency_s": 8.013148597721974,
+            "throughput_tokens_s": 91.1641708978722
+          },
+          "ours_v80": {
+            "avg_energy_kj_per_problem": 3.6810808152793757,
+            "avg_latency_s": 6.339921596193608,
+            "throughput_tokens_s": 115.22414545810146
+          },
+          "strong_baseline": {
+            "avg_energy_kj_per_problem": 4.602231227486986,
+            "avg_latency_s": 6.265666528604472,
+            "throughput_tokens_s": 116.5896788247164
+          },
+          "weak_baseline": {
+            "avg_energy_kj_per_problem": 5.518982535908827,
+            "avg_latency_s": 8.681668865626452,
+            "throughput_tokens_s": 84.14419617927442
+          }
+        },
+        "olympiadbench": {
+          "ours_u280": {
+            "avg_energy_kj_per_problem": 6.352516485157569,
+            "avg_latency_s": 12.404665090169958,
+            "throughput_tokens_s": 83.87788218978682
+          },
+          "ours_v80": {
+            "avg_energy_kj_per_problem": 5.821840232082956,
+            "avg_latency_s": 9.94603329899958,
+            "throughput_tokens_s": 104.61226156780445
+          },
+          "strong_baseline": {
+            "avg_energy_kj_per_problem": 6.577415486952808,
+            "avg_latency_s": 8.935440662691004,
+            "throughput_tokens_s": 116.44384158706798
+          },
+          "weak_baseline": {
+            "avg_energy_kj_per_problem": 7.941912534004384,
+            "avg_latency_s": 12.492990990156295,
+            "throughput_tokens_s": 83.28486251665983
+          }
+        }
+      },
+      "mean_of_datasets": {
+        "ours_u280": {
+          "avg_energy_kj_per_problem": 4.108097617409437,
+          "avg_latency_s": 8.076641395700856,
+          "throughput_tokens_s": 87.91773292326579
+        },
+        "ours_v80": {
+          "avg_energy_kj_per_problem": 3.7390829153193677,
+          "avg_latency_s": 6.414506351153082,
+          "throughput_tokens_s": 111.94693117816269
+        },
+        "strong_baseline": {
+          "avg_energy_kj_per_problem": 4.536174047899276,
+          "avg_latency_s": 6.162677818372177,
+          "throughput_tokens_s": 113.92465995230846
+        },
+        "weak_baseline": {
+          "avg_energy_kj_per_problem": 5.404473159254198,
+          "avg_latency_s": 8.496452335578072,
+          "throughput_tokens_s": 83.00303210420648
+        }
+      },
+      "pooled_total": {
+        "ours_u280": {
+          "avg_energy_kj_per_problem": 3.5652514111985556,
+          "avg_latency_s": 7.028257414613128,
+          "throughput_tokens_s": 87.19753406502136
+        },
+        "ours_v80": {
+          "avg_energy_kj_per_problem": 3.2243597071013936,
+          "avg_latency_s": 5.537865221818056,
+          "throughput_tokens_s": 110.6647942448972
+        },
+        "strong_baseline": {
+          "avg_energy_kj_per_problem": 3.9307870875160567,
+          "avg_latency_s": 5.3457585974566735,
+          "throughput_tokens_s": 114.64167417137736
+        },
+        "weak_baseline": {
+          "avg_energy_kj_per_problem": 4.683335203109289,
+          "avg_latency_s": 7.3606764804879345,
+          "throughput_tokens_s": 83.25956411112935
+        }
+      },
+      "title": "Config2: 0.5B draft - 7B PRM - 1.5B Target",
+      "warnings": []
+    }
+  },
+  "description": "Figure 8 comparison of Weak baseline, Strong baseline, Ours (U280 projected), and Ours (V80 projected).",
+  "schema_version": 1,
+  "sources": {
+    "u280": "/mnt/ccnas2/bdp/zz3822/SpeculativeDecoding/robin/HeteroReason_git/figure8/inputs/u280_metrics.json",
+    "v80": "/mnt/ccnas2/bdp/zz3822/SpeculativeDecoding/robin/HeteroReason_git/figure8/inputs/v80_metrics.json"
+  }
+}
