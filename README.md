@@ -4,6 +4,9 @@ This repository contains the artifact for **HeteroReason**, including the
 algorithmic implementation and the packaged inputs and scripts used to
 reproduce the main algorithmic results and Figure 8.
 
+## Demo
+![demo](./demo.gif)
+
 ## Contents
 
 - `AE_alg/`: algorithmic implementation for the speculative-decoding
