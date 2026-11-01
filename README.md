@@ -5,6 +5,9 @@ algorithmic implementation and the packaged inputs and scripts used to
 reproduce the main algorithmic results and Figure 8.
 
 ## Demo
+
+[10/2026 Update] As a prototype, we build a demo on the HACC cluster using an AMD U55C FPGA and an AMD MI210 GPU (beyond simulation). This work is not limited to FPGA-based platforms but aims to demonstrate the need for heterogeneous reasoning inference.
+
 ![demo](./demo.gif)
 
 ## Contents
